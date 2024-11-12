@@ -4,6 +4,7 @@ const mongoose = require("mongoose");
 const memberSchema = new mongoose.Schema({
   name: String,
   role: String,
+  image: String,
 });
 
 const eventSchema = new mongoose.Schema({
@@ -19,8 +20,11 @@ const clubSchema = new mongoose.Schema({
   name: { type: String, required: true },
   club_message: String,
   club_poster: String,
+  club_logo: String,
   pi_name: String,
   pi_message: String,
+  pi_linkedIn: String,
+  pi_image: String,
   about: [String],
   gallery: [String],
   members: [memberSchema],
